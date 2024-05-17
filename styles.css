@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: grey;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  width: 800px;
+  margin-top: 20px;
+}
+
+h1 {
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color:blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#project-name, #project-description {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.project-list, .project-details {
+  margin: 20px 0;
+}
+
+.project {
+  background-color: #e9ecef;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project button {
+  background-color: #dc3545;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.project button:hover {
+  background-color: #c82333;
+}

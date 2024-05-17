@@ -4,7 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Management Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="container">
+    <h1>Project Management Dashboard</h1>
+    <div class="controls">
+        <button onclick="viewAllProjects()">View All Projects</button>
+        <button onclick="addProject()">Add Project</button>
+        <button onclick="closeProject()">Close</button>
+        <div id="add-project-form" style="display: none;">
+            <input type="text" id="project-name" placeholder="Project Name">
+            <input type="text" id="project-description" placeholder="Project Description">
+            <button onclick="submitProject()">Submit</button>
+    </div>
+    <div class="project-list" id="project-list"></div>
+    <div class="project-details" id="project-details">
+    </div>
+</div>
+<script src="main.js"></script>
 </body>
 </html>
