@@ -1,4 +1,3 @@
-// Change: Load projects from local storage, or use initial projects if local storage is empty
 let projects = JSON.parse(localStorage.getItem('projects')) || [
   { id: 1, name: "Project A", description: "Description of Project A" },
   { id: 2, name: "Project B", description: "Description of Project B" },
@@ -44,24 +43,20 @@ function deleteProject(id) {
   const projectIndex = projects.findIndex(proj => proj.id === id);
   if (projectIndex > -1) {
       projects.splice(projectIndex, 1);
-      // Change: Update local storage after deleting a project
       localStorage.setItem('projects', JSON.stringify(projects));
       renderProjectList();
   }
 }
 
-// New function: Show the add project form
 function addProject() {
   document.getElementById('add-project-form').style.display = 'block';
 }
 
-// New function: Add a new project
 function submitProject() {
   const name = document.getElementById('project-name').value;
   const description = document.getElementById('project-description').value;
   const id = Math.max(...projects.map(p => p.id), 0) + 1;
   projects.push({ id, name, description });
-  // Change: Update local storage after adding a project
   localStorage.setItem('projects', JSON.stringify(projects));
   renderProjectList();
   document.getElementById('add-project-form').style.display = 'none';
@@ -69,6 +64,4 @@ function submitProject() {
 function closeProject() {
   document.getElementById('project-details').innerHTML = '';
 }
-
-// Initial render
 renderProjectList();
